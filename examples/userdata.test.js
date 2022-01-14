@@ -6,7 +6,7 @@ describe('Retrieving data for user with ID 1', () => {
 
         await pactum.spec()
             .get('http://jsonplaceholder.typicode.com/users/1')
-            .expectStatus(200);
+            .expectStatus(200)
     });
 
     test('should yield Content-Type header containing value "application/json"', async () => {
@@ -39,5 +39,18 @@ describe('Retrieving all user data', () => {
         await pactum.spec()
             .get('http://jsonplaceholder.typicode.com/users')
             .expectJsonLength(10)
+    });
+});
+
+describe('Posting a new post item', () => {
+
+    test('should yield HTTP status code 201', async () => {
+
+        let new_post = '{"title": "My awesome new post title", "body": "My awesome new post body", "userId": 1}'
+
+        await pactum.spec()
+            .post('http://jsonplaceholder.typicode.com/posts')
+            .withBody(new_post)
+            .expectStatus(201)
     });
 });
