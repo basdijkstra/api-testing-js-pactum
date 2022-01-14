@@ -46,11 +46,15 @@ describe('Posting a new post item', () => {
 
     test('should yield HTTP status code 201', async () => {
 
-        let new_post = '{"title": "My awesome new post title", "body": "My awesome new post body", "userId": 1}'
+        let new_post = {
+            "title": "My awesome new post title",
+            "body": "My awesome new post body",
+            "userId": 1
+        }
 
         await pactum.spec()
             .post('http://jsonplaceholder.typicode.com/posts')
-            .withBody(new_post)
+            .withJson(new_post)
             .expectStatus(201)
     });
 });
