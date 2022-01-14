@@ -1,0 +1,23 @@
+{
+  "name": "api-testing-javascript",
+  "version": "1.0.0",
+  "description": "Sample code to demonstrate API testing in JavaScript using Jest and PactumJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basdijkstra/api-testing-javascript.git"
+  },
+  "author": "Bas Dijkstra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basdijkstra/api-testing-javascript/issues"
+  },
+  "homepage": "https://github.com/basdijkstra/api-testing-javascript#readme",
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "pactum": "^3.1.1"
+  }
+}
