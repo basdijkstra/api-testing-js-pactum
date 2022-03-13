@@ -52,7 +52,7 @@ describe('Demonstrating that Pactum API mocking can', () => {
 
     test.each(
         [[1], [2], [3]]
-    )('return a response with the correct user ID for user %i', async (userId) => {
+    )('use response templating to return the expected message for user %i', async (userId) => {
 
         addReusePathParameterValueResponse();
 
